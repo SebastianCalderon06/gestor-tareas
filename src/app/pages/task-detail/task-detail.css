@@ -1,0 +1,50 @@
+.detail-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.detail-container h1 {
+  color: #dd0031;
+  text-align: center;
+}
+
+.detail-card {
+  background-color: #f3f3f3;
+  padding: 25px;
+  margin: 25px 0;
+  border-radius: 8px;
+}
+
+.detail-card h2 {
+  color: #333;
+}
+
+.detail-container a {
+  color: #dd0031;
+  text-decoration: none;
+}
+
+.error-message {
+  color: #dd0031;
+}
+
+@media (max-width: 600px) {
+  .detail-container {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .detail-card {
+    padding: 18px;
+  }
+
+  .detail-container h1 {
+    font-size: 24px;
+  }
+
+  .detail-card h2 {
+    font-size: 20px;
+  }
+}

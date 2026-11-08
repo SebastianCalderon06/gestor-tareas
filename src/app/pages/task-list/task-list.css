@@ -1,0 +1,77 @@
+.task-list li > div {
+  display: flex;
+  gap: 8px;
+}
+
+.task-list li > input[type="text"] {
+  min-width: 0;
+}
+
+.task-list button {
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .task-list li {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .task-list li > div {
+    width: 100%;
+  }
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  background-color: #555;
+}
+
+.filters button:hover {
+  background-color: #333;
+}
+
+.error-message {
+  color: #dd0031;
+  background-color: #ffe5e5;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+.task-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.stat-card {
+  background-color: #f3f3f3;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.stat-card h3 {
+  color: #555;
+  font-size: 16px;
+}
+
+.stat-card p {
+  font-size: 28px;
+  font-weight: bold;
+  color: #dd0031;
+  margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+  .task-stats {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,20 @@
+
+.container {
+  text-align: center;
+  margin-top: 80px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #dd0031;
+  font-size: 36px;
+}
+
+h2 {
+  color: #333333;
+}
+
+p {
+  font-size: 18px;
+  color: #666666;
+}

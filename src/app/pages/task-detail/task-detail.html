@@ -1,0 +1,38 @@
+<section class="detail-container">
+
+  <h1>Detalle de la tarea</h1>
+
+  @if (loading()) {
+    <p>Cargando información...</p>
+  }
+
+  @if (error()) {
+    <p class="error-message">{{ error() }}</p>
+  }
+
+  @if (task(); as currentTask) {
+    <div class="detail-card">
+
+      <h2>{{ currentTask.title }}</h2>
+
+      <p>
+        <strong>Identificador:</strong>
+        {{ currentTask.id }}
+      </p>
+
+      <p>
+        <strong>Estado:</strong>
+
+        @if (currentTask.completed) {
+          Completada
+        } @else {
+          Pendiente
+        }
+      </p>
+
+    </div>
+  }
+
+  <a routerLink="/">Volver a mis tareas</a>
+
+</section>
