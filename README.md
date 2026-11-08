@@ -1,59 +1,220 @@
-# GestorTareas
+# Gestor de Tareas
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.6.
+Aplicación web desarrollada con Angular que permite administrar tareas mediante operaciones CRUD, filtros y navegación entre una vista general y una vista de detalle. La aplicación consume una API REST para obtener y gestionar las tareas.
 
-## Development server
+## 1. Información del proyecto
 
-To start a local development server, run:
+- **Nombre:** Gestor de Tareas
+- **Framework:** Angular
+- **Lenguaje:** TypeScript
+- **Estilos:** CSS
+- **API REST:** DummyJSON
+- **Despliegue:** Netlify
+
+### Enlaces
+
+- **Aplicación publicada:** https://gestortareasde.netlify.app/
+- **Repositorio GitHub:** https://github.com/SebastianCalderon06/gestor-tareas
+
+## 2. Tecnologías utilizadas
+
+- Angular CLI 22.2.6
+- Node.js 26.13.0
+- npm 11.20.0
+- TypeScript
+- HTML5
+- CSS3
+- DummyJSON API
+- Git y GitHub
+- Netlify
+
+## 3. Funcionalidades
+
+La aplicación cuenta con las siguientes funcionalidades:
+
+- Consultar la lista de tareas desde una API REST.
+- Crear nuevas tareas.
+- Editar el título de una tarea.
+- Eliminar tareas.
+- Marcar tareas como completadas o pendientes.
+- Filtrar tareas por estado: todas, pendientes y completadas.
+- Consultar el detalle de una tarea.
+- Visualizar contadores de tareas totales, pendientes y completadas.
+- Navegar entre la lista y el detalle de cada tarea.
+- Diseño adaptable a diferentes tamaños de pantalla.
+
+## 4. Instalación y ejecución
+
+### Requisitos previos
+
+- Node.js instalado.
+- npm instalado.
+- Angular CLI.
+
+### Clonar el repositorio
 
 ```bash
-ng serve
+git clone https://github.com/SebastianCalderon06/gestor-tareas.git
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Entrar al proyecto
 
 ```bash
-ng generate component component-name
+cd gestor-tareas
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Instalar dependencias
 
 ```bash
-ng generate --help
+npm install
 ```
 
-## Building
+### Ejecutar la aplicación
 
-To build the project run:
+```bash
+ng serve --open
+```
+
+La aplicación estará disponible en:
+
+`http://localhost:4200/`
+
+## 5. Estructura del proyecto
+
+La aplicación está organizada de la siguiente manera:
+
+```text
+src/
+└── app/
+    ├── pages/
+    │   ├── task-list/
+    │   │   ├── task-list.ts
+    │   │   ├── task-list.html
+    │   │   └── task-list.css
+    │   │
+    │   └── task-detail/
+    │       ├── task-detail.ts
+    │       ├── task-detail.html
+    │       └── task-detail.css
+    │
+    ├── services/
+    │   └── task.ts
+    │
+    ├── app.config.ts
+    ├── app.routes.ts
+    ├── app.html
+    └── app.ts
+```
+
+### Descripción de los componentes principales
+
+- **TaskList:** permite visualizar, crear, editar, eliminar y filtrar tareas.
+- **TaskDetail:** muestra la información individual de una tarea.
+- **TaskService:** centraliza la comunicación con la API REST.
+- **App Routes:** configura las rutas de navegación.
+- **App Config:** configura los proveedores necesarios para la aplicación.
+
+## 6. API REST
+
+Se utiliza la API pública DummyJSON:
+
+`https://dummyjson.com/todos`
+
+El servicio implementa las operaciones necesarias para gestionar las tareas:
+
+- GET: consultar tareas.
+- POST: crear tareas.
+- PUT: actualizar tareas.
+- DELETE: eliminar tareas.
+
+**Nota:** DummyJSON simula las operaciones de escritura, pero no almacena permanentemente los cambios realizados. Por esta razón, las modificaciones pueden no mantenerse después de actualizar la aplicación.
+
+## 7. Rutas de navegación
+
+La aplicación cuenta con dos rutas principales:
+
+| Ruta | Descripción |
+|---|---|
+| `/` | Muestra la lista de tareas. |
+| `/tasks/:id` | Muestra el detalle de una tarea según su identificador. |
+
+## 8. Pruebas unitarias
+
+Se utiliza Vitest para ejecutar las pruebas unitarias.
+
+Para ejecutar las pruebas:
+
+```bash
+ng test --watch=false
+```
+
+### Resultados obtenidos
+
+- Archivos de prueba aprobados: 4.
+- Pruebas ejecutadas: 8.
+- Pruebas aprobadas: 8.
+- Pruebas fallidas: 0.
+
+## 9. Compilación de producción
+
+Para generar la versión de producción:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Resultados obtenidos:
 
-## Running unit tests
+| Métrica | Resultado |
+|---|---:|
+| Tamaño inicial del bundle | 244.77 kB |
+| Transferencia estimada | 66.91 kB |
+| Tiempo de compilación | 1.782 segundos |
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## 10. Métricas del proyecto
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+Se utilizó CLOC para analizar el código fuente mediante:
 
 ```bash
-ng e2e
+npx cloc src
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Resultados:
 
-## Additional Resources
+| Lenguaje | Archivos | Líneas de código |
+|---|---:|---:|
+| TypeScript | 11 | 398 |
+| HTML | 4 | 135 |
+| CSS | 4 | 121 |
+| **Total** | **19** | **654** |
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Resultados de Lighthouse
+
+Evaluación realizada en modo móvil:
+
+| Categoría | Puntuación |
+|---|---:|
+| Performance | 49 |
+| Accessibility | 84 |
+| Best Practices | 100 |
+| SEO | 90 |
+
+## 11. Despliegue
+
+La aplicación fue publicada utilizando Netlify y está disponible públicamente en:
+
+https://gestortareasde.netlify.app/
+
+El proyecto se encuentra conectado al repositorio de GitHub para facilitar su actualización y despliegue.
+
+## 12. Autoría y recursos
+
+- Repositorio: https://github.com/SebastianCalderon06/gestor-tareas
+- API: https://dummyjson.com/docs/todos
+- Documentación oficial de Angular: https://angular.dev/
+- Documentación de Vitest: https://vitest.dev/
+- Documentación de Netlify: https://docs.netlify.com/
+
+---
+
+**Proyecto académico: Gestor de Tareas desarrollado con Angular.**
