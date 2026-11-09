@@ -233,15 +233,6 @@ Evaluación realizada en modo móvil:
 
 ![Resultados de Lighthouse](Screenshot%202026-11-08%20134201.png)
 
-### Horas de trabajo y dificultad
-
-| Integrante | Horas trabajadas | Dificultad de Angular (1 a 5) |
-|---|---:|---:|
-| [Nombre 1] | [PENDIENTE] | [PENDIENTE] |
-| [Nombre 2] | [PENDIENTE] | [PENDIENTE] |
-| [Nombre 3] | [PENDIENTE] | [PENDIENTE] |
-| [Nombre 4, si aplica] | [PENDIENTE] | [PENDIENTE] |
-| **Total / promedio** | **[SUMA]** | **[PROMEDIO]** |
 
 ## 11. Despliegue
 
@@ -256,7 +247,35 @@ El proyecto se encuentra conectado al repositorio de GitHub para facilitar su ac
 
 ## 12. Autoría y recursos
 
-**Integrantes y aportes:** [agregar nombres, tarea realizada por cada integrante y enlaces o capturas de sus commits].
+**Integrantes y aportes:** 
+
+Cristian Moscoso:
+ documentación y verificación del funcionamiento de la aplicación.
+
+Actividades realizadas:
+
+Investigación de Angular: estudio de sus características, arquitectura, componentes, Signals, servicios, rutas y herramientas de desarrollo.
+
+Documentación técnica: elaboración y organización del informe en Markdown, incluyendo los siete bloques de investigación solicitados.
+
+Implementación de los componentes TaskList y TaskDetail.
+
+Sebastian Calderon:
+desarrollo de la aplicación utilizando Angular y TypeScript.
+
+Actividades:
+
+
+
+Desarrollo de las operaciones CRUD.
+
+Integración de la API REST DummyJSON.
+
+Configuración de las rutas de navegación.
+
+Implementación de la lógica de tareas y filtros.
+
+Desarrollo de la interfaz y sus funcionalidades.
 
 
 ### Uso de IA y NotebookLM
