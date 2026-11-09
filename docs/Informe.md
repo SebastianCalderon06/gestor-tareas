@@ -15,6 +15,7 @@ Aplicación web desarrollada con Angular que permite administrar tareas mediante
 
 - **Aplicación publicada:** https://gestortareasde.netlify.app/
 - **Repositorio GitHub:** https://github.com/SebastianCalderon06/gestor-tareas
+- **Cuaderno NotebookLM:** https://notebook.google.com/notebook/f619f0bd-05e9-41e2-8d77-2c7fc2de6bd3
 
 ## 2. Tecnologías utilizadas
 
@@ -27,6 +28,17 @@ Aplicación web desarrollada con Angular que permite administrar tareas mediante
 - DummyJSON API
 - Git y GitHub
 - Netlify
+
+### Investigación breve de Angular (7 bloques)
+
+1. **Panorama:** Angular es un framework mantenido por Google, de código abierto y con licencia MIT. Trabaja principalmente con TypeScript y permite organizar aplicaciones mediante componentes. En este proyecto usamos Angular 22. **Error y solución:** [anotar una duda o dificultad real y cómo la resolvieron].
+2. **Instalación:** Angular CLI permite crear y ejecutar proyectos. Con `npm install` instalamos las dependencias y con `ng serve --open` iniciamos la aplicación. **Error y solución:** [completar con su experiencia].
+3. **Componentes:** Dividimos el trabajo entre `TaskList` y `TaskDetail`. Usamos plantillas HTML, eventos como `(click)`, `@if`, `@for` y `ngOnInit` para cargar tareas. **Pendiente:** demostrar un componente reutilizable usado tres veces (por ejemplo, una tarjeta de estadísticas con entradas). **Error y solución:** [completar].
+4. **Estado y reactividad:** `signal()` permite actualizar valores y reflejar cambios en la pantalla; lo usamos con las tareas y los filtros. `TaskService` concentra las peticiones HTTP, pero **falta demostrar estado reactivo compartido entre dos componentes**. **Error y solución:** [completar].
+5. **Rutas y API:** Angular Router permite acceder a la lista (`/`) y al detalle (`/tasks/:id`). Con `HttpClient` realizamos operaciones GET, POST, PUT y DELETE sobre DummyJSON; mostramos estados de carga y mensajes de error. **Error y solución:** [completar].
+6. **Pruebas:** Utilizamos Vitest y archivos `.spec.ts` para verificar componentes y servicios. En la ejecución registrada pasaron 8 pruebas. **Error y solución:** [completar].
+7. **Ecosistema y despliegue:** Utilizamos Angular CLI para compilar, CSS propio para los estilos, GitHub para colaborar y Netlify para publicar. Angular también dispone de DevTools y bibliotecas de interfaz. **Error y solución:** [completar].
+
 
 ## 3. Funcionalidades
 
@@ -42,6 +54,8 @@ La aplicación cuenta con las siguientes funcionalidades:
 - Visualizar contadores de tareas totales, pendientes y completadas.
 - Navegar entre la lista y el detalle de cada tarea.
 - Diseño adaptable a diferentes tamaños de pantalla.
+
+
 
 ## 4. Instalación y ejecución
 
@@ -78,6 +92,9 @@ ng serve --open
 La aplicación estará disponible en:
 
 `http://localhost:4200/`
+
+**Tiempo de configuración inicial:** [PENDIENTE: minutos reales desde la instalación hasta ver la app funcionando].
+
 
 ## 5. Estructura del proyecto
 
@@ -129,6 +146,8 @@ El servicio implementa las operaciones necesarias para gestionar las tareas:
 
 **Nota:** DummyJSON simula las operaciones de escritura, pero no almacena permanentemente los cambios realizados. Por esta razón, las modificaciones pueden no mantenerse después de actualizar la aplicación.
 
+
+
 ## 7. Rutas de navegación
 
 La aplicación cuenta con dos rutas principales:
@@ -137,6 +156,7 @@ La aplicación cuenta con dos rutas principales:
 |---|---|
 | `/` | Muestra la lista de tareas. |
 | `/tasks/:id` | Muestra el detalle de una tarea según su identificador. |
+
 
 ## 8. Pruebas unitarias
 
@@ -155,6 +175,9 @@ ng test --watch=false
 - Pruebas aprobadas: 8.
 - Pruebas fallidas: 0.
 
+
+![Resultados de las pruebas](Screenshot%202026-11-08%20134038.png)
+
 ## 9. Compilación de producción
 
 Para generar la versión de producción:
@@ -170,6 +193,9 @@ Resultados obtenidos:
 | Tamaño inicial del bundle | 244.77 kB |
 | Transferencia estimada | 66.91 kB |
 | Tiempo de compilación | 1.782 segundos |
+| Tamaño total de la carpeta `dist` | [PENDIENTE: medir en KB] |
+
+![Compilación de producción](Screenshot%202026-11-08%20134055.png)
 
 ## 10. Métricas del proyecto
 
@@ -188,16 +214,34 @@ Resultados:
 | CSS | 4 | 121 |
 | **Total** | **19** | **654** |
 
+<!-- CAPTURA: resultado de npx cloc src. Imagen: cloc.png -->
+![Líneas de código](Screenshot%202026-11-08%20134115.png)
+
 ### Resultados de Lighthouse
 
 Evaluación realizada en modo móvil:
 
 | Categoría | Puntuación |
 |---|---:|
-| Performance | 49 |
-| Accessibility | 84 |
+| Performance | 86 |
+| Accessibility | 85 |
 | Best Practices | 100 |
 | SEO | 90 |
+
+*Se actualizaron Performance y Accessibility según la última captura recibida (8 de noviembre de 2026). Repetir la medición si cambia el código.*
+
+
+![Resultados de Lighthouse](Screenshot%202026-11-08%20134201.png)
+
+### Horas de trabajo y dificultad
+
+| Integrante | Horas trabajadas | Dificultad de Angular (1 a 5) |
+|---|---:|---:|
+| [Nombre 1] | [PENDIENTE] | [PENDIENTE] |
+| [Nombre 2] | [PENDIENTE] | [PENDIENTE] |
+| [Nombre 3] | [PENDIENTE] | [PENDIENTE] |
+| [Nombre 4, si aplica] | [PENDIENTE] | [PENDIENTE] |
+| **Total / promedio** | **[SUMA]** | **[PROMEDIO]** |
 
 ## 11. Despliegue
 
@@ -207,13 +251,33 @@ https://gestortareasde.netlify.app/
 
 El proyecto se encuentra conectado al repositorio de GitHub para facilitar su actualización y despliegue.
 
+
+![Aplicación en Netlify](Screenshot%202026-11-08%20134014.png)
+
 ## 12. Autoría y recursos
+
+**Integrantes y aportes:** [agregar nombres, tarea realizada por cada integrante y enlaces o capturas de sus commits].
+
+
+### Uso de IA y NotebookLM
+
+Utilizamos NotebookLM para estudiar los conceptos de Angular y apoyar la preparación del informe y la exposición. También consultamos ChatGPT para aclarar dudas y revisar el README. Las explicaciones técnicas deben contrastarse con la documentación y el código del proyecto antes de la entrega.
+
+- **Cuaderno:** https://notebook.google.com/notebook/f619f0bd-05e9-41e2-8d77-2c7fc2de6bd3
+- **Fuentes cargadas:** [anotar las fuentes que realmente agregaron].
+- **Preguntas realizadas a la IA:** [pegar 2 o 3 prompts reales utilizados].
+- **Cómo verificamos las respuestas:** [explicar qué documentación o archivos revisaron].
+
+
 
 - Repositorio: https://github.com/SebastianCalderon06/gestor-tareas
 - API: https://dummyjson.com/docs/todos
 - Documentación oficial de Angular: https://angular.dev/
 - Documentación de Vitest: https://vitest.dev/
 - Documentación de Netlify: https://docs.netlify.com/
+- Documentación de Lighthouse: https://developer.chrome.com/docs/lighthouse/overview
+- Documentación de Angular Signals: https://angular.dev/guide/signals
+- Documentación de Angular Router: https://angular.dev/guide/routing
 
 ---
 
