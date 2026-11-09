@@ -265,8 +265,23 @@ Utilizamos NotebookLM para estudiar los conceptos de Angular y apoyar la prepara
 
 - **Cuaderno:** https://notebook.google.com/notebook/f619f0bd-05e9-41e2-8d77-2c7fc2de6bd3
 - **Fuentes cargadas:** [anotar las fuentes que realmente agregaron].
-- **Preguntas realizadas a la IA:** [pegar 2 o 3 prompts reales utilizados].
-- **Cómo verificamos las respuestas:** [explicar qué documentación o archivos revisaron].
+- **Preguntas realizadas a la IA:** Explícame los componentes TaskList y TaskDetail, el servicio TaskService, las rutas, los Signals, el consumo de DummyJSON y las pruebas.
+
+Utiliza ejemplos sencillos y explica los términos técnicos. Distingue entre las funcionalidades comprobadas en el código y las que no puedes verificar.
+
+Actúa como profesor universitario de programación web. Necesito investigar Angular para un proyecto académico.
+
+Desarrolla estos 7 bloques:
+
+1. Panorama: origen, creador, mantenimiento, versión, licencia y filosofía.
+2. Instalación: Angular CLI, creación del proyecto y estructura de carpetas.
+3. Componentes: plantillas, inputs, outputs, eventos, condicionales, listas y ciclo de vida.
+4. Estado y reactividad: Signals, servicios y estado compartido.
+5. Rutas y API REST: Angular Router, HttpClient, GET, POST, PUT y DELETE.
+6. Pruebas: herramientas y pruebas unitarias de componentes.
+7. Ecosistema y despliegue: CLI, DevTools, build y Netlify.
+
+Para cada bloque incluye qué es, para qué sirve, un ejemplo sencillo y las fuentes oficiales utilizadas. Utiliza únicamente las fuentes cargadas. No inventes experiencias de nuestro grupo. Explica cualquier dato que no puedas verificar.
 
 
 
